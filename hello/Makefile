@@ -3,7 +3,3 @@ build:
 
 run:
 	@./bin/main
-
-valgrind:
-	@docker build -t cpp-valgrind .
-	@docker run --rm cpp-valgrind
