@@ -16,10 +16,8 @@ private:
 public:
     Queue() : front(nullptr), back(nullptr) {}
     ~Queue() {
-        Node* curr = front;
-        while(curr) {
-            cout << curr->data << endl;
-            curr = curr->next;
+        while(front) {
+            pop();
         }
     }
 
