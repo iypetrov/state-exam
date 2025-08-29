@@ -1,4 +1,3 @@
-// single linked list
 #include <iostream>
 
 using namespace std;
@@ -17,8 +16,14 @@ private:
 public:
     LinkedList() : head(nullptr), tail(nullptr) {}
 
+    ~LinkedList() {
+        while(head != nullptr) {
+            pop_front();
+        }
+    }
+
     bool empty() {
-        if (head == nullptr && tail == nullptr) {
+        if (head == nullptr) {
             return true;
         }
         return false;
